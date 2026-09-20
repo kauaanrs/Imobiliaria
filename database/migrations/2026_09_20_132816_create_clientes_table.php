@@ -18,7 +18,6 @@ return new class extends Migration
             $table->date('data_nascimento');
             $table->string('telefone', 45);
             $table->string('email', 80)->unique();
-            $table->date('data_cadastro');
             $table->timestamps();
         });
     }

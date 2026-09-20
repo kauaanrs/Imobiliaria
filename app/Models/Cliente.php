@@ -9,14 +9,17 @@ class Cliente extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'idCliente';
+
     protected $fillable = [
         'nome',
         'cpf',
-        'email',
+        'data_nascimento',
         'telefone',
-        'endereco',
-        'cidade',
-        'estado',
-        'observacoes',
+        'email',
+    ];
+
+    protected $casts = [
+        'data_nascimento' => 'date',
     ];
 }
